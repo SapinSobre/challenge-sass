@@ -5,6 +5,20 @@
     -moz-box-shadow: $shadow $bodyFontColor;
     box-shadow: $shadow $bodyFontColor;
 }
+$colors: white,
+ rgb(179, 222, 236),
+rgb(107, 135, 145),
+rgb(71, 89, 95),
+rgb(45, 55, 58),
+rgb(9, 11, 12);
+
+@for $i from 1 through 6 {
+  li:nth-child(#{$i}) {
+    $colors:nth($colors, $i); 
+    background-color: $colors;
+
+  }
+}
 
 body {
     font: 100% "Space Mono", monospace;
